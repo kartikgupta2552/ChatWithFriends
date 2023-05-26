@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "509559225568",
+    "project_id": "chatwithfriends-4b182",
+    "storage_bucket": "chatwithfriends-4b182.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509559225568:android:e909217281486014f56485",
+        "android_client_info": {
+          "package_name": "com.example.chatwithfriends"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509559225568-2pe2589r0bc2t1nkqci9sev85qm8i6j7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACC5s5OOyFnCu0uskmzk61Dmglnm7rtS4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509559225568-2pe2589r0bc2t1nkqci9sev85qm8i6j7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
