@@ -9,6 +9,10 @@
         android:id="@+id/logout"
         android:title="Logout"/>
 
+    <item
+        android:id="@+id/groupchat"
+        android:title="Group Chat"/>
+
 
 
 </menu>
