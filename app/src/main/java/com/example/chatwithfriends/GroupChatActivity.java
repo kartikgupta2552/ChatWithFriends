@@ -1,21 +1,21 @@
 package com.example.chatwithfriends;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.chatwithfriends.Adapters.chatAdapter;
 import com.example.chatwithfriends.Model.MessageModel;
 import com.example.chatwithfriends.databinding.ActivityGroupChatBinding;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -24,6 +24,7 @@ import java.util.Date;
 public class GroupChatActivity extends AppCompatActivity {
 
     ActivityGroupChatBinding binding;
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +44,11 @@ public class GroupChatActivity extends AppCompatActivity {
         });
 
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        auth = FirebaseAuth.getInstance();
+
         final ArrayList<MessageModel> messageModels = new ArrayList<>();
 
-        final String senderId = FirebaseAuth.getInstance().getUid();
+        final String senderId = auth.getUid();
         binding.userNameChat.setText("Group");
 
         final chatAdapter adapter = new chatAdapter(messageModels , this);
@@ -73,11 +76,12 @@ public class GroupChatActivity extends AppCompatActivity {
                             }
                         });
 
+
         binding.sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                final String message = binding.editMessage.getText().toString();
+                String message = binding.editMessage.getText().toString();
                 final MessageModel model = new MessageModel(senderId , message);
                 model.setTimestamp(new Date().getTime());
                 binding.editMessage.setText("");

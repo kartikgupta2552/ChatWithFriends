@@ -33,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -60,10 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.groupchat:
-                auth.signOut();
                 Intent intentt = new Intent(MainActivity.this , GroupChatActivity.class);
                 startActivity(intentt);
-                finish();
                 break;
 
         }

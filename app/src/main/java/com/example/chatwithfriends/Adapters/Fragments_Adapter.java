@@ -43,9 +43,9 @@ public class Fragments_Adapter extends FragmentPagerAdapter {
 
         if(position == 0)
             title = "Chats";
-        if(position == 0)
+        if(position == 1)
             title = "Status";
-        if(position == 0)
+        if(position == 2)
             title = "Calls";
 
 //        switch (position){

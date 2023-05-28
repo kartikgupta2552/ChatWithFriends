@@ -57,6 +57,7 @@ public class chatDetailActivity extends AppCompatActivity {
         final ArrayList<MessageModel> messageModels = new ArrayList<>();
         final chatAdapter chatAdapter = new chatAdapter(messageModels , this);
 
+
         binding.chatRecycle.setAdapter(chatAdapter);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
