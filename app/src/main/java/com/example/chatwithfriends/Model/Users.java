@@ -2,7 +2,7 @@ package com.example.chatwithfriends.Model;
 
 public class Users {
 
-    String profilePic , Mail , Password , userName , userId , lastMessage;
+    String profilePic , Mail , Password , userName , userId , lastMessage , status;
 
     public Users(String profilePic, String userName, String mail, String password, String userId, String lastMessage) {
         this.profilePic = profilePic;
@@ -20,6 +20,14 @@ public class Users {
         Mail = mail;
         Password = password;
         this.userName = userName; 
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getUserId() {
